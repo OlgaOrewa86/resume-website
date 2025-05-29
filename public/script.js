@@ -22,7 +22,7 @@ const typed = new Typed(".multiple-text", {
 });
 
 document.getElementById("download-btn").addEventListener("click", function () {
-  const cvPath = "assets/Resume_Olga_Nikiforov.pdf";
+  const cvPath = "public/assets/Resume_Olga_Nikiforov.pdf";
   window.open(cvPath, "_blank"); // Opens the CV in a new tab
 });
 
