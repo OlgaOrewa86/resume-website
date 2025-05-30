@@ -10,14 +10,14 @@ require("dotenv").config();
 const app = express();
 
 // Serve static files (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname)));
 
 app.use(cors());
 app.use(express.json());
 
 // Handle root request ("/")
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 const predefinedSubject = "Inquiry from Website"; // fixed part
