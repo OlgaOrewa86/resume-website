@@ -54,8 +54,8 @@ app.post("/send-email", emailLimiter, async (req, res) => {
 
   // Configure NodeMailer transport
   const transporter = nodemailer.createTransport({
-    host: "smtp.mail.me.com",
-    port: 465, // Use 587 STARTTLS (or 465 for SSL)
+    host: process.env.SMTP_HOST || "smtp.mail.me.com",
+    port: process.env.SMTP_PORT || 465, // Default to 465 if env variable not set
     secure: true, // Must be false for STARTTLS (true for SSL)
     auth: {
       user: process.env.EMAIL_USER,
