@@ -7,7 +7,7 @@ A personal portfolio showcasing my development journey.
 - Hosted on GitHub Pages and Render
 
 ## How to Run
-1.  Clone the repo:  
+1. Clone the repo:  
    ```sh
    git clone https://github.com/OlgaOrewa86/resume-website.git
    ```
