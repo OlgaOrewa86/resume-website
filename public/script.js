@@ -108,3 +108,13 @@ document.querySelector("form").addEventListener("submit", async (event) => {
     showToast("❌ Unexpected error occurred while sending email.", false);
   }
 });
+
+// Make each project box clickable (opens Live Demo)
+document.querySelectorAll(".project-box").forEach((box) => {
+  const liveDemo = box.querySelector(".project-links a");
+  if (liveDemo) {
+    box.addEventListener("click", () => {
+      window.open(liveDemo.href, "_blank");
+    });
+  }
+});

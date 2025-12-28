@@ -543,6 +543,7 @@ span {
   border: 0.3rem solid var(--bg-color);
   transition: 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .project-box:hover {
