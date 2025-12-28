@@ -118,3 +118,10 @@ document.querySelectorAll(".project-box").forEach((box) => {
     });
   }
 });
+
+// Prevent inner buttons from triggering the box click
+document.querySelectorAll(".project-links a").forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+});
