@@ -109,15 +109,28 @@ document.querySelector("form").addEventListener("submit", async (event) => {
   }
 });
 
-// Make each project box clickable (opens Live Demo)
+// // Make each project box clickable (opens Live Demo)
+// document.querySelectorAll(".project-box").forEach((box) => {
+//   const liveDemo = box.querySelector(".project-links a");
+//   if (liveDemo) {
+//     box.addEventListener("click", () => {
+//       window.open(liveDemo.href, "_blank");
+//     });
+//   }
+// });
+
+// Make each project box clickable (opens View Code on GitHub)
 document.querySelectorAll(".project-box").forEach((box) => {
-  const liveDemo = box.querySelector(".project-links a");
-  if (liveDemo) {
+  const viewCode = box.querySelectorAll(".project-links a")[1]; 
+  // [1] = second link ("View Code")
+
+  if (viewCode) {
     box.addEventListener("click", () => {
-      window.open(liveDemo.href, "_blank");
+      window.open(viewCode.href, "_blank");
     });
   }
 });
+
 
 // Prevent inner buttons from triggering the box click
 document.querySelectorAll(".project-links a").forEach((btn) => {
